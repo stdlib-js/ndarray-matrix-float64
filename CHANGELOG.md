@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-04)
+## Unreleased (2026-11-06)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`d87ead6`](https://github.com/stdlib-js/stdlib/commit/d87ead6d0f8f86d8bb4b09da50c6088c34278195) - **docs:** rename variable _(by Athan Reines)_
 -   [`b18a134`](https://github.com/stdlib-js/stdlib/commit/b18a134a47895fc3e56018929222d356d3ef10c2) - **docs:** update related packages sections [(#13397)](https://github.com/stdlib-js/stdlib/pull/13397) _(by stdlib-bot)_
 -   [`7dc9808`](https://github.com/stdlib-js/stdlib/commit/7dc98086e9503556dc548aa2e4899f299c12999f) - **docs:** fix examples, notes, and return description [(#13151)](https://github.com/stdlib-js/stdlib/pull/13151) _(by Philipp Burckhardt)_
 -   [`56ffe96`](https://github.com/stdlib-js/stdlib/commit/56ffe96cd1f83bb3e66cc0c2b63eba05fd2d5ee9) - **docs:** document accepted arguments _(by Athan Reines)_
