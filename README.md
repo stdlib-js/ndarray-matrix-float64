@@ -45,38 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-matrix-float64
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-Float64Matrix = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-matrix-float64@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var Float64Matrix = require( 'path/to/vendor/umd/ndarray-matrix-float64/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-matrix-float64@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.Float64Matrix;
-})();
-</script>
+var Float64Matrix = require( '@stdlib/ndarray-matrix-float64' );
 ```
 
 #### Float64Matrix( \[options] )
@@ -244,17 +238,12 @@ The function accepts the following arguments:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-sum@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-map@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-matrix-float64@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var sum = require( '@stdlib/blas-ext-sum' );
+var map = require( '@stdlib/ndarray-map' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var Float64Matrix = require( '@stdlib/ndarray-matrix-float64' );
 
 // Create a matrix containing random values:
 var x = new Float64Matrix([
@@ -281,11 +270,6 @@ v = sum( y, {
     'dims': [ -1 ]
 });
 console.log( ndarray2array( v ) );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -309,9 +293,16 @@ console.log( ndarray2array( v ) );
 ## See Also
 
 -   <span class="package-name">[`@stdlib/ndarray-matrix/float32`][@stdlib/ndarray/matrix/float32]</span><span class="delimiter">: </span><span class="description">create a single-precision floating-point matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/int16`][@stdlib/ndarray/matrix/int16]</span><span class="delimiter">: </span><span class="description">create a 16-bit signed integer matrix (i.e., a two-dimensional ndarray).</span>
 -   <span class="package-name">[`@stdlib/ndarray-matrix/int32`][@stdlib/ndarray/matrix/int32]</span><span class="delimiter">: </span><span class="description">create a 32-bit signed integer matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/int8`][@stdlib/ndarray/matrix/int8]</span><span class="delimiter">: </span><span class="description">create an 8-bit signed integer matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/uint16`][@stdlib/ndarray/matrix/uint16]</span><span class="delimiter">: </span><span class="description">create a 16-bit unsigned integer matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/uint32`][@stdlib/ndarray/matrix/uint32]</span><span class="delimiter">: </span><span class="description">create a 32-bit unsigned integer matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/uint8`][@stdlib/ndarray/matrix/uint8]</span><span class="delimiter">: </span><span class="description">create an 8-bit unsigned integer matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/uint8c`][@stdlib/ndarray/matrix/uint8c]</span><span class="delimiter">: </span><span class="description">create a clamped 8-bit unsigned integer matrix (i.e., a two-dimensional ndarray).</span>
 -   <span class="package-name">[`@stdlib/ndarray-matrix/complex128`][@stdlib/ndarray/matrix/complex128]</span><span class="delimiter">: </span><span class="description">create a double-precision complex floating-point matrix (i.e., a two-dimensional ndarray).</span>
 -   <span class="package-name">[`@stdlib/ndarray-matrix/complex64`][@stdlib/ndarray/matrix/complex64]</span><span class="delimiter">: </span><span class="description">create a single-precision complex floating-point matrix (i.e., a two-dimensional ndarray).</span>
+-   <span class="package-name">[`@stdlib/ndarray-matrix/bool`][@stdlib/ndarray/matrix/bool]</span><span class="delimiter">: </span><span class="description">create a boolean matrix (i.e., a two-dimensional ndarray).</span>
 -   <span class="package-name">[`@stdlib/ndarray-matrix/ctor`][@stdlib/ndarray/matrix/ctor]</span><span class="delimiter">: </span><span class="description">create a matrix (i.e., a two-dimensional ndarray).</span>
 -   <span class="package-name">[`@stdlib/ndarray-vector/float64`][@stdlib/ndarray/vector/float64]</span><span class="delimiter">: </span><span class="description">create a double-precision floating-point vector (i.e., a one-dimensional ndarray).</span>
 -   <span class="package-name">[`@stdlib/ndarray-ctor`][@stdlib/ndarray/ctor]</span><span class="delimiter">: </span><span class="description">multidimensional array constructor.</span>
@@ -392,23 +383,37 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-matrix-float64/main/LICENSE
 
-[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer/tree/umd
+[@stdlib/array/buffer]: https://github.com/stdlib-js/array-buffer
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
 <!-- <related-links> -->
 
-[@stdlib/ndarray/matrix/float32]: https://github.com/stdlib-js/ndarray-matrix-float32/tree/umd
+[@stdlib/ndarray/matrix/float32]: https://github.com/stdlib-js/ndarray-matrix-float32
 
-[@stdlib/ndarray/matrix/int32]: https://github.com/stdlib-js/ndarray-matrix-int32/tree/umd
+[@stdlib/ndarray/matrix/int16]: https://github.com/stdlib-js/ndarray-matrix-int16
 
-[@stdlib/ndarray/matrix/complex128]: https://github.com/stdlib-js/ndarray-matrix-complex128/tree/umd
+[@stdlib/ndarray/matrix/int32]: https://github.com/stdlib-js/ndarray-matrix-int32
 
-[@stdlib/ndarray/matrix/complex64]: https://github.com/stdlib-js/ndarray-matrix-complex64/tree/umd
+[@stdlib/ndarray/matrix/int8]: https://github.com/stdlib-js/ndarray-matrix-int8
 
-[@stdlib/ndarray/matrix/ctor]: https://github.com/stdlib-js/ndarray-matrix-ctor/tree/umd
+[@stdlib/ndarray/matrix/uint16]: https://github.com/stdlib-js/ndarray-matrix-uint16
 
-[@stdlib/ndarray/vector/float64]: https://github.com/stdlib-js/ndarray-vector-float64/tree/umd
+[@stdlib/ndarray/matrix/uint32]: https://github.com/stdlib-js/ndarray-matrix-uint32
+
+[@stdlib/ndarray/matrix/uint8]: https://github.com/stdlib-js/ndarray-matrix-uint8
+
+[@stdlib/ndarray/matrix/uint8c]: https://github.com/stdlib-js/ndarray-matrix-uint8c
+
+[@stdlib/ndarray/matrix/complex128]: https://github.com/stdlib-js/ndarray-matrix-complex128
+
+[@stdlib/ndarray/matrix/complex64]: https://github.com/stdlib-js/ndarray-matrix-complex64
+
+[@stdlib/ndarray/matrix/bool]: https://github.com/stdlib-js/ndarray-matrix-bool
+
+[@stdlib/ndarray/matrix/ctor]: https://github.com/stdlib-js/ndarray-matrix-ctor
+
+[@stdlib/ndarray/vector/float64]: https://github.com/stdlib-js/ndarray-vector-float64
 
 <!-- </related-links> -->
 
